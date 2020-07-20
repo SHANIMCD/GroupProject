@@ -1,3 +1,3 @@
 # I'm a teapot!
 
-Group Project
+Group Projects!
