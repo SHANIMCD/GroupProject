@@ -4,8 +4,7 @@ class OpeningTimes extends React.Component {
 
     render() {
         return (
-            <>
-            </>
+            <h1>Opening </h1>
         )
     }
 }

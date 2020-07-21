@@ -18,8 +18,8 @@ class Navigation extends React.Component {
                         <Nav className="mr-auto">
                             <Nav.Link href="/">Home</Nav.Link>
                             <NavDropdown title="Films" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="./newReleases">New Releases</NavDropdown.Item>
-                                <NavDropdown.Item href="./currentlyShowing">Currently Showing</NavDropdown.Item>
+                                <NavDropdown.Item href="./releases">New Releases</NavDropdown.Item>
+                                <NavDropdown.Item href="./showing">Currently Showing</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="./screens">Screens</Nav.Link>
                             <Nav.Link href="./openingTimes">Opening Times</Nav.Link>

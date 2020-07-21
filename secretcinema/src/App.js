@@ -20,11 +20,11 @@ function App() {
         <Navigation />
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route path='/releases' component={NewReleases} />
-          <Route path='/showing' component={currentlyShowing} />
-          <Route path='/screens' component={screens} />
-          <Route path='/opentimes' component={OpeningTimes} />
-          <Route path='/bookings' component={ticketBookings} />
+          <Route path="/releases" component={NewReleases} />
+          <Route path="/showing" component={currentlyShowing} />
+          <Route path="/screens" component={screens} />
+          <Route path="/opentimes" component={OpeningTimes} />
+          <Route path="/bookings" component={ticketBookings} />
         </Switch>
       </div>
     </BrowserRouter>
