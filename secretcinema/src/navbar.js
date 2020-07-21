@@ -22,8 +22,8 @@ class Navigation extends React.Component {
                                 <NavDropdown.Item href="./showing">Currently Showing</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="./screens">Screens</Nav.Link>
-                            <Nav.Link href="./openingTimes">Opening Times</Nav.Link>
-                            <Nav.Link href="./ticketBookings">BOOK NOW</Nav.Link>
+                            <Nav.Link href="./opentimes">Opening Times</Nav.Link>
+                            <Nav.Link href="./bookings">BOOK NOW</Nav.Link>
                         </Nav>
                         <Form inline>
                             <FormControl type="text" placeholder="Search Term" className="mr-sm-2" />
