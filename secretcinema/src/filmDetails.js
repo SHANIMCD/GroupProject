@@ -44,8 +44,11 @@ class filmDetails extends React.Component {
         return (
             <div>
                 <h1>{this.state.title}</h1>
-                <p>{this.state.actors}</p>
-
+                <p>Starring: {this.state.actors}</p>
+                <p>Showing times</p>
+                <p> 
+                {this.state.director === 'N/A' ? '' : <p>Director: {this.state.director}</p>}
+                </p>
             </div>
         
 
