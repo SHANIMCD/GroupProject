@@ -10,6 +10,8 @@ import currentlyShowing from './currentlyShowing';
 import screens from './screens';
 import OpeningTimes from './openingTimes';
 import ticketBookings from './ticketBookings';
+import filmDetails from './filmDetails';
+import filmClassification from './filmClassification';
 
 function App() {
   return (
@@ -20,23 +22,17 @@ function App() {
         <Navigation />
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route path='/releases' component={NewReleases} />
-          <Route path='/showing' component={currentlyShowing} />
-          <Route path='/screens' component={screens} />
-          <Route path='/opentimes' component={OpeningTimes} />
-          <Route path='/bookings' component={ticketBookings} />
+          <Route path="/releases/:id" component={filmDetails} />
+          <Route path="/releases" component={NewReleases} />
+          <Route path="/showing" component={currentlyShowing} />
+          <Route path="/screens" component={screens} />
+          <Route path="/opentimes" component={OpeningTimes} /> 
+          <Route path="/ticketBookings" component={ticketBookings} />
+          <Route path="/filmClassification" component={filmClassification} />
         </Switch>
       </div>
     </BrowserRouter>
   )
-
-  // return (
-  //   <div className="App">
-  //     <Navigation />
-  //     <Homepage />
-
-  //   </div>
-  // );
 }
 
 export default App;
