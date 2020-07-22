@@ -1,7 +1,8 @@
 import React from 'react';
 
 class ticketBookings extends React.Component {
-    email = React.createRef();
+    state = {
+        booking: {MovieTitle: "", ScreenDate: "", ScreenTm: "", NoSeats: ""}}
 
 
     handleSubmit = e => {
@@ -10,38 +11,43 @@ class ticketBookings extends React.Component {
         console.log("Submitted");
     }
 
+    handleChange = ({currentTarget: input}) => {
+        const booking = {...this.state.booking};
+        booking[input.name] = input.value;
+        this.setState({booking});
+    }
+
     
     render() {
+
+        const {booking} = this.state;
         return (
             <div>
                 <h1> Personal Details</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="FName">First Name</label>
-                        <input id ="FName"type="text" className="form-control"/>
+                        <label htmlFor="MovieTitle">Movie Title</label>
+                        <input onChange={this.handleChange} name = "MovieTitle" value = {booking.MovieTitle} id ="MovieTitle"type="text" className="form-control"/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="SName">Surname</label>
-                        <input id = "SName"type="text" className="form-control"/>
+                        <label htmlFor="ScreenDate">Screen Date</label>
+                        <input onChange={this.handleChange} name = "ScreenDate" value = {booking.ScreenDate}id = "ScreenDate"type="date" className="form-control"/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="email">Email Address</label>
-                        <input ref={this.email} id="email" type ="text" className="form-control"/>
+                        <label htmlFor="ScreenTm">Screen Time</label>
+                        <input onChange={this.handleChange} name = "ScreenTm" value = {booking.ScreentTm}id="ScreenTm" type ="time" className="form-control"/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="NoSeats">Number of seats</label>
+                        <select ><option value = "1"> 1 </option> 
+                        <option value = "2"> 2 </option> 
+                        <option value = "3"> 3 </option> 
+                        <option value = "4"> 4 </option> 
+                        <option value = "5"> 5 </option> 
+                        <option value = "6"> 6 </option>  onChange={this.handleChange} name = "NoSeats" value = {booking.NoSeats} id="NoSeats" type ="select" className="form-control"/>
+                        </select>
                     </div>
                    
-                
-                <h1> Payment Details</h1>
-                
-                    <div className="form-group">
-                        <label htmlFor="CDetails">Card Number</label>
-                        <input id ="CDetails"type="text" className="form-control"/>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="SNo">Security Number</label>
-                        <input id = "SNo"type="text" className="form-control"/>
-                    </div>
-                    
-                    <button className = "btn btn-primary"> Book </button>
                 </form>
             </div> 
         )

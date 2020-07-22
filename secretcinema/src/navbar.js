@@ -23,7 +23,7 @@ class Navigation extends React.Component {
                             </NavDropdown>
                             <Nav.Link href="./screens">Screens</Nav.Link>
                             <Nav.Link href="./opentimes">Opening Times</Nav.Link>
-                            <Nav.Link href="./bookings">BOOK NOW</Nav.Link>
+                            <Nav.Link href="./ticketBookings">BOOK NOW</Nav.Link>
                         </Nav>
                         <Form inline>
                             <FormControl type="text" placeholder="Search Term" className="mr-sm-2" />
