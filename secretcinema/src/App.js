@@ -12,6 +12,7 @@ import OpeningTimes from './openingTimes';
 import ticketBookings from './ticketBookings';
 import filmDetails from './filmDetails';
 import filmClassification from './filmClassification';
+import payments from './payment.js';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path="/opentimes" component={OpeningTimes} /> 
           <Route path="/ticketBookings" component={ticketBookings} />
           <Route path="/filmClassification" component={filmClassification} />
+
+          <Route path="/payments" component={payments} />
         </Switch>
       </div>
     </BrowserRouter>
