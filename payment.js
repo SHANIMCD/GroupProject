@@ -34,7 +34,7 @@ class ticketBookings extends React.Component {
                         <input id = "SNo"type="text" className="form-control"/>
                     </div>
                     
-                    <button className = "btn btn-primary"> Book </button>
+                    <button className = "btn btn-primary"> Pay</button>
                 </form>
             </div> 
         )

@@ -44,10 +44,41 @@ class ticketBookings extends React.Component {
                         <option value = "3"> 3 </option> 
                         <option value = "4"> 4 </option> 
                         <option value = "5"> 5 </option> 
-                        <option value = "6"> 6 </option>  onChange={this.handleChange} name = "NoSeats" value = {booking.NoSeats} id="NoSeats" type ="select" className="form-control"/>
+                        <option value = "6"> 6 </option>  
+                        onChange={this.handleChange} name = "NoSeats" value = {booking.NoSeats} id="NoSeats" type ="select" className="form-control"/>
                         </select>
                     </div>
-                   
+                    <div className="form-group">
+                        <label htmlFor="Children">Children</label>
+                        <select ><option value = "1"> 1 </option> 
+                        <option value = "2"> 2 </option> 
+                        <option value = "3"> 3 </option> 
+                        <option value = "4"> 4 </option> 
+                        <option value = "5"> 5 </option> 
+                        <option value = "6"> 6 </option>  onChange={this.handleChange} name = "NoSeats" value = {booking.Children} id="NoSeats" type ="select" className="form-control"/>
+                        </select>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="Adults">Adults</label>
+                        <select ><option value = "1"> 1 </option> 
+                        <option value = "2"> 2 </option> 
+                        <option value = "3"> 3 </option> 
+                        <option value = "4"> 4 </option> 
+                        <option value = "5"> 5 </option> 
+                        <option value = "6"> 6 </option>  onChange={this.handleChange} name = "NoSeats" value = {booking.Adults} id="Adults" type ="select" className="form-control"/>
+                        </select>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="Concessions">Concessions</label>
+                        <select ><option value = "1"> 1 </option> 
+                        <option value = "2"> 2 </option> 
+                        <option value = "3"> 3 </option> 
+                        <option value = "4"> 4 </option> 
+                        <option value = "5"> 5 </option> 
+                        <option value = "6"> 6 </option>  onChange={this.handleChange} name = "Concessions" value = {booking.Concessions} id="Concessions" type ="select" className="form-control"/>
+                        </select>
+                    </div>
+                    <button className = "btn btn-primary"> Book </button>
                 </form>
             </div> 
         )
