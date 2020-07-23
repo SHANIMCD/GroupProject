@@ -40,7 +40,6 @@ function App() {
           </Switch>
         </Bloop>
 
-
       </div>
     </BrowserRouter>
   )

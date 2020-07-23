@@ -37,9 +37,6 @@ class Homepage extends React.Component {
           </Switch>
                 
 
-
-            
-
                 </div>
                 
                 

@@ -27,15 +27,21 @@ class ticketBookings extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
+<<<<<<< HEAD
 
         const email = this.email.current.value;
 
+=======
+>>>>>>> 289e97509cdc4f39c115df38a204660351216aaf
         
         const errors = this.validate();
         console.log(errors);
         this.setState({errors});
         if (errors) return;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 289e97509cdc4f39c115df38a204660351216aaf
 
         console.log("Submitted");
     }
