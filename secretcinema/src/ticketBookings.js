@@ -28,6 +28,8 @@ class ticketBookings extends React.Component {
                         <label htmlFor="email">Email Address</label>
                         <input ref={this.email} id="email" type ="text" className="form-control"/>
                     </div>
+                    <button className = "btn btn-primary"> Book </button>
+            
                    
                 
                 <h1> Payment Details</h1>
