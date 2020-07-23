@@ -1,63 +1,48 @@
 import React from 'react';
 import axios from 'axios';
-//import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+// import filmDetails from './filmDetails';
+const apiKey = '&apikey=f1887e96';
 
+class NewReleases extends React.Component {
 
-class currentlyShowing extends React.Component {
-
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state = {
-            title: '',
-            actors: '',
-            director: '',
-            year: '',
-            poster: '',
-            plot: '',
-            rating: '',
-            genres: '',
-            runtime: ''
-
+            data: []
         }
     }
 
     componentDidMount() {
-        const KEY = "d252c797";
-        const returnID = 'tt0104039'
-        axios.get("http://www.omdbapi.com/?apikey=" + KEY + "&i=" + returnID)
-            .then((res) => {
-                console.log(res);
-                this.setState(
-                    {
-                        title: res.data.Title,
-                        director: res.data.Director,
-                        actors: res.data.Actors,
-                        year: res.data.Year,
-                        poster: res.data.Poster,
-                        plot: res.data.Plot,
-                        rating: res.data.imdbRating,
-                        genres: res.data.Genre,
-                        runtime: res.data.Runtime
-                    })
-            })
-            .catch(err => console.log(err))
+        axios.get('http://www.omdbapi.com/?s=harry+potter' + apiKey)
+        .then((res) => { 
+            console.log(res);
+        this.setState({ data: res.data.Search });
+        })
+        .catch(err => console.log(err))
     }
 
     render() {
         return (
             <div>
-                <h2>{this.state.title}</h2>
-                <img alt='' src={this.state.poster} />
-                <p>Starring: {this.state.actors}</p>
-                <p>Director: {this.state.director}</p>
-                <p>Showing Times: </p>
+                 {
+                    this.state.data.map(film => (
+                        <div key={film.imdbID}>
+                            <Link
+                            to={`/showing/${film.imdbID}`}>
+                            <img alt='' src={film.Poster} />    
+                            <h4>{film.Title}</h4>
+                            </Link>
+
+                        </div>    
+                    ))
+                } 
             </div>
         )
-
-
     }
-}
+}     
+export default NewReleases;
 
 
 
-export default currentlyShowing; 
+

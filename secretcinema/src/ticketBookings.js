@@ -6,6 +6,7 @@ class ticketBookings extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
+        const email = this.email.current.value;
 
         console.log("Submitted");
     }
