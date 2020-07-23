@@ -16,8 +16,6 @@ import showingDetails from './showingDetails';
 
 function App() {
   return (
-
-
     <BrowserRouter>
       <div>
         <Navigation />
