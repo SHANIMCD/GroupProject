@@ -13,6 +13,7 @@ import ticketBookings from './ticketBookings';
 import filmDetails from './filmDetails';
 import filmClassification from './filmClassification';
 import showingDetails from './showingDetails';
+import Dashboard from './dashboard';
 
 function App() {
   return (
@@ -23,13 +24,14 @@ function App() {
           <Switch>
             <Route path="/showing/:id" component={showingDetails} />
             <Route path="/showing" component={currentlyShowing} />
-            <Route path="/screens" component={screens} />
+            {/* <Route path="/screens" component={screens} />
             <Route path="/opentimes" component={OpeningTimes} />
             <Route path="/ticketBookings" component={ticketBookings} />
-            <Route path="/filmClassification" component={filmClassification} />
+            <Route path="/filmClassification" component={filmClassification} /> */}
             <Route path="/releases/:id" component={filmDetails} />
             <Route path="/releases" component={NewReleases} />
-            <Route exact path="/" component={Homepage} />
+            
+            <Route path="/" component={Homepage} />
           </Switch>
         </Bloop>
       </div>
