@@ -24,6 +24,7 @@ class Homepage extends React.Component {
 
                 <div class = "col-md-4">
 
+
                 
                 <Switch>
             
@@ -35,6 +36,9 @@ class Homepage extends React.Component {
             <Route exact path="/" component={AboutCinema} />
           </Switch>
                 
+
+
+            
 
                 </div>
                 
