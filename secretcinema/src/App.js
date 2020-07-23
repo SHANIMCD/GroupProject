@@ -15,8 +15,6 @@ import filmClassification from './filmClassification';
 
 function App() {
   return (
-
-
     <BrowserRouter>
       <div>
         <Navigation />
