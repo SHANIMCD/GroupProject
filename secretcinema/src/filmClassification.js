@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Linking, Text } from 'react-native';
 class filmClassification extends React.Component {
     render () {
         return (
@@ -13,10 +12,7 @@ class filmClassification extends React.Component {
             <p> <br /> Suitable for all. 
             <br /> (The board states that while they cannot predict what might upset a particular child;
             <br /> a 'U' film should be suitable for audiences aged 4 and older).
-            {/* <Text style={{color: 'blue'}}
-                onPress={() => Linking.openURL('https://www.bbfc.co.uk/about-classification/u')}>
-                More Information
-            </Text> */}
+            <br /> <a href="https://www.bbfc.co.uk/about-classification/u" target="_blank">More Information</a>
             </p>
 
             <br />
@@ -25,6 +21,7 @@ class filmClassification extends React.Component {
             <p> <br /> General viewing, but some scenes may be unsuitable for young children.
             <br /> (It is the board's policy that movies rated 'PG' should not disturb a child of about 8 years of age or older; 
             <br /> however, parents are advised to consider whether the content may upset young or more sensitive children).
+            <br /> <a href="https://www.bbfc.co.uk/about-classification/pg" target="_blank">More Information</a>
             </p>
 
             <br />
@@ -32,6 +29,7 @@ class filmClassification extends React.Component {
             <h4>12 Advisory</h4>
             <p> <br /> Recommended for 12 years and older. People under 12 years must be accompanied by
             <br /> an adult. Used only in cinema, replaced 12 in 2002. Equivalent to PG-13.
+            <br /> <a href="https://www.bbfc.co.uk/about-classification/12a-and-12" target="_blank">More Information</a>
             </p>
             
 
@@ -41,6 +39,7 @@ class filmClassification extends React.Component {
             <p> <br /> Recommended for 12 years and older. Anybody under 12 may see it (at home), as long as parents or
             <br /> guardians say they can. Nobody younger than 12 may rent or buy a '12' rated video. 12 was discontinued
             <br /> for cinema in 2002, and was replaced by 12A. Equivalent to PG-13.
+            <br /> <a href="https://www.bbfc.co.uk/about-classification/12a-and-12" target="_blank">More Information</a>
             </p>
 
             <br />
@@ -48,6 +47,7 @@ class filmClassification extends React.Component {
             <h4>15</h4>
             <p> <br /> Suitable only for 15 years and older. Nobody younger than 15 may see a '15' film in a cinema. Nobody
             <br /> younger than 15 may rent or buy a '15' rated video.
+            <br /> <a href="https://www.bbfc.co.uk/about-classification/15" target="_blank">More Information</a>
             </p>
 
             <br />
@@ -56,6 +56,7 @@ class filmClassification extends React.Component {
             <p> <br />  Suitable only for adults. Nobody younger than 18 may see an '18' film in a cinema. Nobody younger than
             <br /> 18 may rent or buy an '18' rated video. These films may contain strong language, strong sexual contact, and
             <br /> strong blood and gore.
+            <br /> <a href="https://www.bbfc.co.uk/about-classification/18" target="_blank">More Information</a>
             </p>
 
             <br />
@@ -63,6 +64,7 @@ class filmClassification extends React.Component {
             <h4>R18</h4>
             <p> <br />  To be shown only in specially licensed sex cinemas, or supplied only in licensed sex
             <br /> shops, and to adults only. These films contain sexually explicit or pornographic content.
+            <br /> <a href="https://www.bbfc.co.uk/about-classification/r18" target="_blank">More Information</a>
             </p>
 
             <br />

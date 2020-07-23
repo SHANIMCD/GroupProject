@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 // import filmDetails from './filmDetails';
-const apiKey = 'apikey=f1887e96';
+const apiKey = '&apikey=f1887e96';
 
 class NewReleases extends React.Component {
 
@@ -14,7 +14,7 @@ class NewReleases extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://www.omdbapi.com/?s=Batman&page=2&' + apiKey)
+        axios.get('http://www.omdbapi.com/?s=x-men' + apiKey)
         .then((res) => { 
             console.log(res);
         this.setState({ data: res.data.Search });
@@ -28,11 +28,12 @@ class NewReleases extends React.Component {
                  {
                     this.state.data.map(film => (
                         <div key={film.imdbID}>
-                            <Link to={`/releases/${film.imdbID}`}>
+                            <Link
+                            to={`/releases/${film.imdbID}`}>
+                            <img alt='' src={film.Poster}/>    
                             <h2>{film.Title}</h2>
-                            <h3>{film.Actors}</h3> 
-                            <h3>{film.Director}</h3>
                             </Link>
+
                         </div>    
                     ))
                 } 

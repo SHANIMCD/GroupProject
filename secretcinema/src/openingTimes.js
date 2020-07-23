@@ -8,9 +8,7 @@ class OpeningTimes extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col sm>
-                    <img alt='' src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=625&q=80" />
-                    </Col>
+                    
                     <Col sm>
                     <h1>Opening Times:</h1>
                 <p>

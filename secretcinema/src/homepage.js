@@ -1,5 +1,12 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import AboutCinema from './AboutCinema';
+import Navigation from './navbar';
+import screens from './screens';
+import OpeningTimes from './openingTimes';
+import ticketBookings from './ticketBookings';
+import filmClassification from './filmClassification';
+import {Route, Switch } from 'react-router-dom';
 
 class Homepage extends React.Component {
 
@@ -10,23 +17,27 @@ class Homepage extends React.Component {
             <div class = "row">
 
                 <div class = "col-md-8">
+                
                 <img alt='' src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=625&q=80"/>
+                
                 </div>
 
                 <div class = "col-md-4">
-                <h1>About Secret Cinema</h1>
-                <br />
-                <p>
-                Secret Cinema is the first ever 
-                <br /> cinema in London, opened in 1949
-                <br /> by Hollywood director Walter 
-                <br /> Franklin. It is located in the heart 
-                <br /> of Piccadilly Circus.
-                </p>
-                    <div>
-                    <Button href="./ticketbookings" variant="dark">Book Now</Button>{' '} <br />
-                    <br /> <Button href="./filmClassification" variant="dark">Film Classifications</Button>{' '} 
-                    </div>
+
+
+                
+                <Switch>
+            
+             <Route path="/screens" component={screens} />
+            <Route path="/opentimes" component={OpeningTimes} />
+            <Route path="/ticketBookings" component={ticketBookings} />
+            <Route path="/filmClassification" component={filmClassification} /> 
+            
+            <Route exact path="/" component={AboutCinema} />
+          </Switch>
+                
+
+
                 </div>
                 
                 
