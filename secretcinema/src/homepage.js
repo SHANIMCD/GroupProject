@@ -24,7 +24,7 @@ class Homepage extends React.Component {
                 <br /> of Piccadilly Circus.
                 </p>
                     <div>
-                    <Button variant="dark">Book Now</Button>{' '} <br />
+                    <Button href="./ticketbookings" variant="dark">Book Now</Button>{' '} <br />
                     <br /> <Button href="./filmClassification" variant="dark">Film Classifications</Button>{' '} 
                     </div>
                 </div>
