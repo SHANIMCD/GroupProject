@@ -12,27 +12,35 @@ class NewReleases extends React.Component {
         super()
         this.state = {
             data: []
+           
+
         }
     }
 
     componentDidMount() {
         axios.get('http://www.omdbapi.com/?s=harry+potter' + apiKey)
         .then((res) => { 
-            console.log(res);
+            
         this.setState({ data: res.data.Search });
+        // index = res.data.Search.length;
+        console.log(this.state);
         })
         .catch(err => console.log(err))
     }
 
+
     render() {
         return (
-            <div className = "page">
-                <Card>
+            <div className ="page">
+            
+            
+                
                  {
+                     
                     this.state.data.map(film => (
-                        
-                        
-                        <div key={film.imdbID}>
+                        <div className ="card-body">
+                        <Card className="card">
+                        <div key={film.imdbID} >
                             <Link
                             to={`/showing/${film.imdbID}`}>
                                 
@@ -47,11 +55,12 @@ class NewReleases extends React.Component {
 
                         </div> 
                         
-                        
-                          
+                        </Card>
+                         </div> 
                     ))
                 } 
-                </Card>
+                
+                
             </div>
         )
     }
