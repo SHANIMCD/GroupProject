@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "express": "^4.17.1",
+    "qs": "^6.9.4",
     "react": "^16.13.1",
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
@@ -36,5 +37,4 @@
       "last 1 safari version"
     ]
   }
-  
 }
