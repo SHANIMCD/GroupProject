@@ -27,11 +27,13 @@ class ticketBookings extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
+
         
         const errors = this.validate();
         console.log(errors);
         this.setState({errors});
         if (errors) return;
+
 
         console.log("Submitted");
     }
