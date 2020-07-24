@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Card from "react-bootstrap/Card";
 import { Link } from 'react-router-dom';
 // import filmDetails from './filmDetails';
 const apiKey = '&apikey=f1887e96';
@@ -24,19 +25,24 @@ class NewReleases extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className = "page">
+                 
                  {
                     this.state.data.map(film => (
-                        <div key={film.imdbID}>
+                        <div className="card">
+                        <div  key={film.imdbID}>
                             <Link
                             to={`/releases/${film.imdbID}`}>
-                            <img alt='' src={film.Poster}/>    
-                            <h2>{film.Title}</h2>
+                            <Card.Img alt='' src={film.Poster}/>    
+                            <Card.Body>
+                            <Card.Title><h2>{film.Title}</h2></Card.Title>
+                            </Card.Body>
                             </Link>
-
+                            </div>
                         </div>    
                     ))
                 } 
+               
             </div>
         )
     }

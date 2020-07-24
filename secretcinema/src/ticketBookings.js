@@ -27,21 +27,14 @@ class ticketBookings extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
-<<<<<<< HEAD
 
         const email = this.email.current.value;
 
-=======
->>>>>>> 289e97509cdc4f39c115df38a204660351216aaf
         
         const errors = this.validate();
         console.log(errors);
         this.setState({errors});
         if (errors) return;
-<<<<<<< HEAD
-
-=======
->>>>>>> 289e97509cdc4f39c115df38a204660351216aaf
 
         console.log("Submitted");
     }
@@ -74,44 +67,45 @@ class ticketBookings extends React.Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="NoSeats">Number of seats</label>
-                        <select ><option value = "1"> 1 </option> 
+                        <select onChange={this.handleChange} name = "NoSeats" value = {booking.NoSeats} id="NoSeats" type ="select" className="form-control">
+ 
+                        <option value = "1"> 1 </option> 
                         <option value = "2"> 2 </option> 
                         <option value = "3"> 3 </option> 
                         <option value = "4"> 4 </option> 
                         <option value = "5"> 5 </option> 
                         <option value = "6"> 6 </option>  
-                        onChange={this.handleChange} name = "NoSeats" value = {booking.NoSeats} id="NoSeats" type ="select" className="form-control"/>
                         </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="Children">Children</label>
-                        <select ><option value = "1"> 1 </option> 
+                        <select onChange={this.handleChange} name = "NoSeats" value = {booking.Children} id="NoSeats" type ="select" className="form-control"
+                        ><option value = "1"> 1 </option> 
                         <option value = "2"> 2 </option> 
                         <option value = "3"> 3 </option> 
                         <option value = "4"> 4 </option> 
                         <option value = "5"> 5 </option> 
-                        <option value = "6"> 6 </option>  onChange={this.handleChange} name = "NoSeats" value = {booking.Children} id="NoSeats" type ="select" className="form-control"/>
-                        </select>
+                        <option value = "6"> 6 </option>  </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="Adults">Adults</label>
-                        <select ><option value = "1"> 1 </option> 
+                        <select onChange={this.handleChange} name = "NoSeats" value = {booking.Adults} id="Adults" type ="select" className="form-control">
+                        <option value = "1"> 1 </option> 
                         <option value = "2"> 2 </option> 
                         <option value = "3"> 3 </option> 
                         <option value = "4"> 4 </option> 
                         <option value = "5"> 5 </option> 
-                        <option value = "6"> 6 </option>  onChange={this.handleChange} name = "NoSeats" value = {booking.Adults} id="Adults" type ="select" className="form-control"/>
-                        </select>
+                        <option value = "6"> 6 </option>   </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="Concessions">Concessions</label>
-                        <select ><option value = "1"> 1 </option> 
+                        <select onChange={this.handleChange} name = "Concessions" value = {booking.Concessions} id="Concessions" type ="select" className="form-control">
+                        <option value = "1"> 1 </option> 
                         <option value = "2"> 2 </option> 
                         <option value = "3"> 3 </option> 
                         <option value = "4"> 4 </option> 
                         <option value = "5"> 5 </option> 
-                        <option value = "6"> 6 </option>  onChange={this.handleChange} name = "Concessions" value = {booking.Concessions} id="Concessions" type ="select" className="form-control"/>
-                        </select>
+                        <option value = "6"> 6 </option>  </select>
                     </div>
                     {/* <Button  href="./payments" variant="dark">Book Now</Button>{' '} <br /> */}
 
