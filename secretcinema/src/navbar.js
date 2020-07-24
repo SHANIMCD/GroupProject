@@ -8,6 +8,8 @@ import FormControl from 'react-bootstrap/FormControl';
 
 class Navigation extends React.Component {
 
+
+
     render() {
         return (
             <div>
@@ -26,7 +28,10 @@ class Navigation extends React.Component {
                             <Nav.Link href="./bookings">BOOK NOW</Nav.Link>
                         </Nav>
                         <Form inline>
-                            <FormControl type="text" placeholder="Search Term" className="mr-sm-2" />
+                            <FormControl type="text" 
+                             onFocus={(e) => e.target.placeholder = ""} 
+                             onBlur={(e) => e.target.placeholder = "Search Term"}
+                            placeholder="Search Term" className="mr-sm-2" />
                             <Button variant="outline-success">Search</Button>
                         </Form>
                     </Navbar.Collapse>
