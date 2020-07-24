@@ -45,18 +45,27 @@ class filmDetails extends React.Component {
     render() {
         return (
             <div>
-                <Card style={{width: '18rem'}}>
+                <div class="container" >
+                <Card className ="page" className="row">
               
+                
+
                 <Card.Img variant="top" alt='' src={this.state.poster} />
+                
+                
+
+                
                 <Card.Body>
                 <Card.Title><h1>{this.state.title}</h1></Card.Title>
-                <Card.Text>
+    
                 <p>Starring: {this.state.actors}</p>
                 <p>Showing times: </p>
                 <p> {this.state.director === 'N/A' ? '' : <p>Director: {this.state.director}</p>} </p>
-                </Card.Text>
+                
                 </Card.Body>
                 </Card>
+                </div>
+           
            </div>
         
 

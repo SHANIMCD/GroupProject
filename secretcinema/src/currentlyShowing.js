@@ -31,14 +31,15 @@ class NewReleases extends React.Component {
 
     render() {
         return (
-            <div className ="page">
+            <div class="container" >
+            <div className ="page" className = "row" >
             
             
                 
                  {
                      
                     this.state.data.map(film => (
-                        <div className ="card-body">
+                        <div className ="card-b">
                         <Card className="card">
                         <div key={film.imdbID} >
                             <Link
@@ -47,7 +48,7 @@ class NewReleases extends React.Component {
                                
                             <Card.Img variant="top" src={film.Poster} /> 
                             <Card.Body>
-                            <Card.Title><h4>{film.Title}</h4></Card.Title>
+                            <h6>{film.Title}</h6>
                             </Card.Body>
                             
                             
@@ -61,6 +62,7 @@ class NewReleases extends React.Component {
                 } 
                 
                 
+            </div>
             </div>
         )
     }

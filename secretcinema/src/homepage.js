@@ -14,15 +14,15 @@ class Homepage extends React.Component {
 
     render() {
         return (
-            <div class = "container">
+            <div class = "container" class="Lphoto">
             <div class = "row">
 
-                <div class = "col-md-8">
+                <div class = "col-md-6" >
                 
                 <LargePhoto />
                 </div>
 
-                <div class = "col-md-4">
+                <div class = "col-md-6" className="info-col">
 
 
                 

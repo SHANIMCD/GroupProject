@@ -22,7 +22,7 @@ import payments from './payment.js';
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className = "wrapper">
         <Navigation />
 
         <Bloop>

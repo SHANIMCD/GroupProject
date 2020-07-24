@@ -2,6 +2,7 @@ import React from 'react';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import LargePhoto from './largePhoto';
+import Button from 'react-bootstrap/Button';
 class Screens extends React.Component {
 
     constructor() {
@@ -34,17 +35,16 @@ class Screens extends React.Component {
     }
     render() {
         return (
-            <div class="container">
+            <div class="container" class="Lphoto">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
 
                         {/* <LargePhoto /> */}
                         <img src={this.state.imgList[this.state.index]}  alt="" />
                     </div>
 
 
-
-                    <div class="col-md-4">
+                    <div class="col-md-6" className="info-col">
 
 
 
@@ -53,8 +53,8 @@ class Screens extends React.Component {
 
                         <p>
                             <h1>Standard Screens:</h1>
-                            <p> View Stardard Screen Seating Plan <button onClick={() => this.onClickSS(1)}>View</button></p>
-                            <p> View Stardarn Screen Decor<button onClick={() => this.onClickSS(2)}>View</button></p>
+                            <p> View Stardard Screen Seating Plan <Button variant="dark" onClick={() => this.onClickSS(1)}>View</Button></p>
+                            <p> View Stardarn Screen Decor<Button variant="dark" onClick={() => this.onClickSS(2)}>View</Button></p>
                             
 
                         </p>
@@ -62,8 +62,8 @@ class Screens extends React.Component {
 
                         <p>
                             <h1>Deluxe Screens:</h1>
-                            <p> View Duluxe Screen Seating Plan <button onClick={() => this.onClickSS(3)}>View</button></p>
-                            <p> View Duluxe Screen Decor<button onClick={() => this.onClickSS(4)}>View</button></p>
+                            <p> View Duluxe Screen Seating Plan <Button variant="dark"  onClick={() => this.onClickSS(3)}>View</Button></p>
+                            <p> View Duluxe Screen Decor<Button variant="dark" onClick={() => this.onClickSS(4)}>View</Button></p>
                             
                         </p>
 </div>
