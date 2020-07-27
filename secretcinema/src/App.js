@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Homepage from './homepage';
 import Navigation from './navbar';
+import Footer from './footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Switch from 'react-bootstrap/esm/Switch';
@@ -12,25 +13,32 @@ import OpeningTimes from './openingTimes';
 import ticketBookings from './ticketBookings';
 import filmDetails from './filmDetails';
 import filmClassification from './filmClassification';
+import payments from './paymentstripe.js';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+const stripePromise = loadStripe('pk_test_51H7dpPFEKVCuEdPWzui5c4xHNkpElRrDnxWnQTE669HftNqsBLDs33ORBqUMqjsnBtXRLsjMe89JsYgnuhMH1bI400w2Qua18A');
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <Navigation />
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route path="/releases/:id" component={filmDetails} />
-          <Route path="/releases" component={NewReleases} />
-          <Route path="/showing" component={currentlyShowing} />
-          <Route path="/screens" component={screens} />
-          <Route path="/opentimes" component={OpeningTimes} /> 
-          <Route path="/ticketBookings" component={ticketBookings} />
-          <Route path="/filmClassification" component={filmClassification} />
-        </Switch>
-      </div>
-    </BrowserRouter>
-  )
+    <Elements stripe={stripePromise}>
+      <BrowserRouter>
+        <div>
+          <Navigation />
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route path="/releases/:id" component={filmDetails} />
+            <Route path="/releases" component={NewReleases} />
+            <Route path="/showing" component={currentlyShowing} />
+            <Route path="/screens" component={screens} />
+            <Route path="/opentimes" component={OpeningTimes} />
+            <Route path="/ticketBookings" component={ticketBookings} />
+            <Route path="/filmClassification" component={filmClassification} />
+            <Route path="/payments/stripe" component={payments} />
+          </Switch>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </Elements>
+  );
 }
-
 export default App;
