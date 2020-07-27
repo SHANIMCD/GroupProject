@@ -8,6 +8,8 @@ import FormControl from 'react-bootstrap/FormControl';
 
 class Navigation extends React.Component {
 
+
+
     render() {
         return (
             <div>
@@ -22,14 +24,17 @@ class Navigation extends React.Component {
                                 <NavDropdown.Item href="/showing">Currently Showing</NavDropdown.Item>
                             </NavDropdown>
 
-                            <Nav.Link href="./screens">Screens</Nav.Link>
-                            <Nav.Link href="./opentimes">Opening Times</Nav.Link>
-                            <Nav.Link href="./ticketBookings">BOOK NOW</Nav.Link>
 
+                            <Nav.Link href="/screens">Screens</Nav.Link>
+                            <Nav.Link href="/opentimes">Opening Times</Nav.Link>
+                            <Nav.Link href="/ticketBookings">BOOK NOW</Nav.Link>
 
                         </Nav>
                         <Form inline>
-                            <FormControl type="text" placeholder="Search Term" className="mr-sm-2" />
+                            <FormControl type="text" 
+                             onFocus={(e) => e.target.placeholder = ""} 
+                             onBlur={(e) => e.target.placeholder = "Search Term"}
+                            placeholder="Search Term" className="mr-sm-2" />
                             <Button variant="outline-success">Search</Button>
                         </Form>
                     </Navbar.Collapse>
