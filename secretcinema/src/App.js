@@ -12,13 +12,18 @@ import OpeningTimes from './openingTimes';
 import ticketBookings from './ticketBookings';
 import filmDetails from './filmDetails';
 import filmClassification from './filmClassification';
+
 import showingDetails from './showingDetails';
+
+import payments from './payment.js';
+
 
 function App() {
   return (
     <BrowserRouter>
       <div>
         <Navigation />
+
         <Bloop>
           <Switch>
             <Route path="/showing/:id" component={showingDetails} />
@@ -32,6 +37,7 @@ function App() {
             <Route exact path="/" component={Homepage} />
           </Switch>
         </Bloop>
+
       </div>
     </BrowserRouter>
   )
