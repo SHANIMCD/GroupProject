@@ -15,6 +15,7 @@ import filmClassification from './filmClassification';
 
 import showingDetails from './showingDetails';
 
+
 import payments from './payment.js';
 
 
@@ -23,8 +24,6 @@ function App() {
     <BrowserRouter>
       <div>
         <Navigation />
-
-        <Bloop>
           <Switch>
             <Route path="/showing/:id" component={showingDetails} />
             <Route path="/showing" component={currentlyShowing} />
@@ -35,9 +34,7 @@ function App() {
             <Route path="/releases/:id" component={filmDetails} />
             <Route path="/releases" component={NewReleases} />
             <Route exact path="/" component={Homepage} />
-          </Switch>
-        </Bloop>
-
+        </Switch>
       </div>
     </BrowserRouter>
   )
