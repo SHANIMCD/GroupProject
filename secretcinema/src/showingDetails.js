@@ -2,7 +2,7 @@ import React from 'react';
 import Axios from 'axios';
 const apiKey = '&apikey=f1887e96';
 
-class filmDetails extends React.Component {
+class showingDetails extends React.Component {
 
     constructor() {
         super()
@@ -57,4 +57,4 @@ class filmDetails extends React.Component {
     }
 }
 
-export default filmDetails;
+export default showingDetails;
