@@ -1,0 +1,26 @@
+{
+  "name": "groupproject",
+  "version": "1.0.0",
+  "description": "Group",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SHANIMCD/GroupProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SHANIMCD/GroupProject/issues"
+  },
+  "homepage": "https://github.com/SHANIMCD/GroupProject#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "express": "^4.17.1",
+    "node": "^14.5.0",
+    "react-bnb-gallery": "^1.4.4",
+    "react-bootstrap": "^1.2.2"
+  }
+}

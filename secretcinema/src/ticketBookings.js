@@ -30,6 +30,10 @@ class ticketBookings extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
+
+
+        const email = this.email.current.value;
+
        
         // const errors = this.validate();
         // console.log(errors);
@@ -64,7 +68,6 @@ class ticketBookings extends React.Component {
         console.log(errors);
         this.setState({errors});
         if (errors) return;
-
 
         console.log("Submitted");
     }
@@ -102,6 +105,7 @@ class ticketBookings extends React.Component {
                         <input onChange={this.handleChange} name="customerName" value={booking.customerName} id="customerName" type="text" className="form-control" />
                     </div>
                     <div className="form-group">
+
                         <label htmlFor="numberOfSeats">Number of seats</label>
                         <select onChange={this.handleChange} name="numberOfSeats" value={booking.numberOfSeats} id="numberOfSeats" type="select" className="form-control">
                             <option value="1"> 1 </option>
@@ -147,6 +151,7 @@ class ticketBookings extends React.Component {
                             <option value="5"> 5 </option>
                             <option value="6"> 6 </option>  
                         </select>
+
                     </div>
                     {/* <Button  href="./payments" variant="dark">Book Now</Button>{' '} <br /> */}
 
@@ -154,7 +159,7 @@ class ticketBookings extends React.Component {
                     {/* <button  href="./payments"className = "btn btn-primary"> Book </button> */}
                     <button className="btn btn-success" type="submit">Book</button>
 
-                    <button  href="./payments"className = "btn btn-primary"> Book </button>
+                    {/* <button  href="./payments"className = "btn btn-primary"> Book </button> */}
 
                 </form>
             </div>

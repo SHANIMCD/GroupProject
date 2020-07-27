@@ -1,5 +1,7 @@
-# I'm a teapot!
 
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> development
