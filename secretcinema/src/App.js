@@ -13,30 +13,28 @@ import ticketBookings from './ticketBookings';
 import filmDetails from './filmDetails';
 import filmClassification from './filmClassification';
 
+import showingDetails from './showingDetails';
+
+
 import payments from './payment.js';
+
 
 function App() {
   return (
-
-
     <BrowserRouter>
       <div>
         <Navigation />
-
-        <Bloop>
-        <Switch>
-      
+          <Switch>
+            <Route path="/showing/:id" component={showingDetails} />
             <Route path="/showing" component={currentlyShowing} />
             <Route path="/screens" component={screens} />
             <Route path="/opentimes" component={OpeningTimes} />
-            <Route path="/bookings" component={ticketBookings} />
+            <Route path="/ticketBookings" component={ticketBookings} />
             <Route path="/filmClassification" component={filmClassification} />
             <Route path="/releases/:id" component={filmDetails} />
             <Route path="/releases" component={NewReleases} />
             <Route exact path="/" component={Homepage} />
         </Switch>
-      </Bloop>
-
       </div>
     </BrowserRouter>
   )

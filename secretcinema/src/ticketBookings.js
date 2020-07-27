@@ -1,10 +1,12 @@
 import React from 'react';
+
 import axios from 'axios';
 
 //import Button from 'react-bootstrap/Button';
 
 class ticketBookings extends React.Component {
     state = {
+
         booking: { movieTitle: "", date: "", time: "", customerName: "", numberOfSeats: "1", children: "1", adults: "1", concessions: "1" },
         errors: {}
 
@@ -20,7 +22,6 @@ class ticketBookings extends React.Component {
     //     errors.date = 'Screen Date is required.';
     //     if (booking.time.trim() === '')
     //     errors.time = 'Screen Time is required.';
-
 
 
     //     return Object.keys(errors).length === 0 ? null: errors;
@@ -43,6 +44,7 @@ class ticketBookings extends React.Component {
                 console.log(error.response)
             });
 
+
     }
 
     handleChange = ({ currentTarget: input }) => {
@@ -56,11 +58,34 @@ class ticketBookings extends React.Component {
     render() {
 
         const { booking } = this.state;
+
+        
+        const errors = this.validate();
+        console.log(errors);
+        this.setState({errors});
+        if (errors) return;
+
+
+        console.log("Submitted");
+    }
+
+    handleChange = ({currentTarget: input}) => {
+        const booking = {...this.state.booking};
+        booking[input.name] = input.value;
+        this.setState({booking});
+    }
+
+    
+    render() {
+
+        const {booking} = this.state;
+
         return (
             <div>
                 <h1>Book a Film</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
+
                         <label htmlFor="movieTitle">Movie Title</label>
                         <input onChange={this.handleChange} name="movieTitle" value={booking.movieTitle} id="movieTitle" type="text" className="form-control" />
                     </div>
@@ -125,8 +150,12 @@ class ticketBookings extends React.Component {
                     </div>
                     {/* <Button  href="./payments" variant="dark">Book Now</Button>{' '} <br /> */}
 
+
                     {/* <button  href="./payments"className = "btn btn-primary"> Book </button> */}
                     <button className="btn btn-success" type="submit">Book</button>
+
+                    <button  href="./payments"className = "btn btn-primary"> Book </button>
+
                 </form>
             </div>
         )
