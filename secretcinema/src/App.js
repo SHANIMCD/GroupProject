@@ -13,18 +13,17 @@ import OpeningTimes from './openingTimes';
 import ticketBookings from './ticketBookings';
 import filmDetails from './filmDetails';
 import filmClassification from './filmClassification';
+import payments from './paymentstripe';
 
 
 import showingDetails from './showingDetails';
 import Dashboard from './dashboard';
 
-import payments from './paymentstripe.js';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 const stripePromise = loadStripe('pk_test_51H7dpPFEKVCuEdPWzui5c4xHNkpElRrDnxWnQTE669HftNqsBLDs33ORBqUMqjsnBtXRLsjMe89JsYgnuhMH1bI400w2Qua18A');
 
 
-import payments from './payment.js';
 
 
 function App() {
