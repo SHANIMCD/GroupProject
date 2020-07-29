@@ -113,9 +113,11 @@ margin: 15px;
   margin: 0 auto;
   
 }
-.classifications{
-  width: 100%;
-
+.pad-top-bot-20{
+  margin: 20px 0;
+}
+.no-padding{
+  padding: 0 !important;
 }
 .info-col-about{
   padding: 0 auto;
