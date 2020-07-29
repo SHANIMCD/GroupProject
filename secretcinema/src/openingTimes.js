@@ -1,11 +1,18 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-
+import LargePhoto from './largePhoto';
 class OpeningTimes extends React.Component {
 
     render() {
         return (
+            <div class="container" class="Lphoto">
+            <div class="row">
+                <div class="col-md-6">
+
+                     <LargePhoto /> 
+                    
+                </div>
             
                <div class = "row">
                     
@@ -41,6 +48,8 @@ class OpeningTimes extends React.Component {
                     <br />11am-10pm */}
                     
                 </p>
+                    </div>
+                    </div>
                     </div>
                     </div>
            

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import LargePhoto from './largePhoto';
 import axios from 'axios';
 
 //import Button from 'react-bootstrap/Button';
@@ -59,18 +59,18 @@ class ticketBookings extends React.Component {
     }
 
 
-    render() {
+// render() {
 
-        const { booking } = this.state;
+//     const { booking } = this.state;
 
-        
-        const errors = this.validate();
-        console.log(errors);
-        this.setState({errors});
-        if (errors) return;
+    
+//     const errors = this.validate();
+//     console.log(errors);
+//     this.setState({errors});
+//     if (errors) return;
 
-        console.log("Submitted");
-    }
+//     console.log("Submitted");
+// }
 
     handleChange = ({currentTarget: input}) => {
         const booking = {...this.state.booking};
@@ -84,7 +84,14 @@ class ticketBookings extends React.Component {
         const {booking} = this.state;
 
         return (
-            <div>
+            <div class="container" class="Lphoto">
+            <div class="row">
+                <div class="col-md-6">
+
+                     <LargePhoto /> 
+                    
+                </div>
+                <div class="col-md-6">
                 <h1>Book a Film</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
@@ -162,6 +169,8 @@ class ticketBookings extends React.Component {
                     {/* <button  href="./payments"className = "btn btn-primary"> Book </button> */}
 
                 </form>
+            </div>
+            </div>
             </div>
         )
     }

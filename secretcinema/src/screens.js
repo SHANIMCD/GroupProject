@@ -1,7 +1,6 @@
 import React from 'react';
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
-import LargePhoto from './largePhoto';
+
+
 import Button from 'react-bootstrap/Button';
 class Screens extends React.Component {
 
@@ -40,7 +39,7 @@ class Screens extends React.Component {
                     <div class="col-md-6">
 
                         {/* <LargePhoto /> */}
-                        <img src={this.state.imgList[this.state.index]}  alt="" />
+                        <img class="Imgfullpercent"c src={this.state.imgList[this.state.index]}  alt="" />
                     </div>
 
 

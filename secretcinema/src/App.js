@@ -32,17 +32,17 @@ function App() {
         
     <Elements stripe={stripePromise}>
       <BrowserRouter>
-      <div className = "wrapper">
+      
           <Navigation />
-
+          <div className = "wrapper">
           <Switch>
             <Route path="/showing/:id" component={showingDetails} />
             <Route path="/showing" component={currentlyShowing} />
             <Route path="/screens" component={screens} />
-             {/* <Route path="/opentimes" component={OpeningTimes} />
-            <Route path="/ticketBookings" component={ticketBookings} />
-
-            <Route path="/filmClassification" component={filmClassification} /> */}
+            
+             <Route path="/opentimes" component={OpeningTimes} />
+             <Route path="/ticketBookings" component={ticketBookings} />
+            
 
             <Route path="/filmClassification" component={filmClassification} />
             <Route path="/payments/stripe" component={payments} />
@@ -50,7 +50,7 @@ function App() {
             <Route path="/releases/:id" component={filmDetails} />
             <Route path="/releases" component={NewReleases} />
             
-            <Route path="/" component={Homepage} />
+            <Route exact path="/" component={Homepage} />
           </Switch>
 
           <Footer />
