@@ -1,6 +1,5 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-// const app = require('./app');
 const apiKey = '&apikey=f1887e96';
 const { expect } = chai;
 
@@ -17,5 +16,6 @@ describe('Showing', () => {
                 done();
             })
         })
-    })
+    });
 });
+

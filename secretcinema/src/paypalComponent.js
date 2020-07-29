@@ -5,8 +5,8 @@ import axios from 'axios';
 
 export default class MyApp extends React.Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             payments: [],
 
@@ -47,35 +47,14 @@ export default class MyApp extends React.Component {
         this.setState({ sum: sum })
     }
 
-    submitForm() {
-        document.getElementById('confirmButton').addEventListener('click', (e) => {
-            e.preventDefault();
-            let info = {};
-            //    let inputtedNumber = document.querySelectorAll('#submitForm > input')
-               let subValue = document.querySelector('#submitForm > input').value
-               let other = document.querySelector('#submitForm > label').value
-                console.log(subValue, other)
-                
-                // axios.post('http://localhost:8081/wo/create', info)
-          
-                
-            
-        })
-    }
-
-    handleClicked() {
-        const authToken = 'A21AAF8Fz4KiozNMi7LLCG4r9Nk6cdC908WHKsnekbofivFhpPt9yeRCtdhxjW9-hXuvNLB1p0cDbklVK5foz2RyzuV8S58Ew'
-        axios.get('https://api.sandbox.paypal.com/v1/payments/payment?count=3&sort_by=create_time', {
-            headers: { authorization: `Bearer ${authToken}` }
-        })
-            .then(res => this.setState({ payments: res.data.payments }))
-            .catch(err => console.log(err))
-    }
-
-    orderBuild(e) {
-        const itemsPicked = []
-        console.log({ [e.target.name]: e.target.value })
-    }
+    // handleClicked() {
+    //     const authToken = 'A21AAF8Fz4KiozNMi7LLCG4r9Nk6cdC908WHKsnekbofivFhpPt9yeRCtdhxjW9-hXuvNLB1p0cDbklVK5foz2RyzuV8S58Ew'
+    //     axios.get('https://api.sandbox.paypal.com/v1/payments/payment?count=3&sort_by=create_time', {
+    //         headers: { authorization: `Bearer ${authToken}` }
+    //     })
+    //         .then(res => this.setState({ payments: res.data.payments }))
+    //         .catch(err => console.log(err))
+    // }
 
     render() {
         const onSuccess = (payment) => {
@@ -95,7 +74,7 @@ export default class MyApp extends React.Component {
 
         let env = 'sandbox'; // you can set here to 'production' for production
         let currency = 'GBP'; // or you can set this value from your props or state  
-        let total = this.state.sum;  // same as above, this is the total amount (based on currency) to be 
+        // let total = this.props.total;  // same as above, this is the total amount (based on currency) to be 
         let locale = 'en_GB';
         // For Customize Style: https://developer.paypal.com/docs/checkout/how-to/customize-button/
         let style = {
@@ -120,8 +99,7 @@ export default class MyApp extends React.Component {
         return (
 
             <>
-            <h1>Book a ticket</h1>
-            <div>
+            {/* <div>
                 <h2>Prices</h2>
                    <div name='items'>
                        <span>{this.state.adultTicket.name} </span>
@@ -137,37 +115,27 @@ export default class MyApp extends React.Component {
                     </div>
                 
             </div>
+*/}
+            {/* <h3>Ticket</h3> */}
 
-            <h2>Selction</h2>
-
-            <select onChange={this.handleChange} name="items">
+            {/* <select onChange={this.handleChange} name="items">
                 <option value="All">Please Select</option>
                 <option value={this.state.adultTicket.price}>Adult</option>
                 <option value={this.state.childTicket.price}>child ticket (under 12)</option>
                 <option value={this.state.concessionTicket.price}>Concession ticket</option>
-            </select>
+            </select>  */}
 
-            <div id="submitForm" onClick={this.submitForm}>
-                <label value={this.state.adultTicket.price} for="adultTicket">Adult: </label>
-                <input name="adultTicket" type="number" placeholder="enter quantity"/>
-                <label value={this.state.childTicket.price} for="childTicket">Child (under 12): </label>
-                <input name="childTicket" type="number" placeholder="enter quantity"/>
-                <label value={this.state.concessionTicket.price} for="concessionTicket">Concession: </label>
-                <input name="concessionTicket" type="number" placeholder="enter quantity"/>
-                <button id="confirmButton">Preview</button>
-            </div>
-
-                <PaypalBtn
+                {/* <PaypalBtn
                     env={env}
                     client={client}
                     currency={currency}
-                    total={total}
+                    // total={total}
                     locale={locale}
                     style={style}
                     onError={onError}
                     onSuccess={onSuccess}
-                    onCancel={onCancel} />
-                <button
+                    onCancel={onCancel} /> */}
+                {/* <button
                     onClick={this.handleClicked}
                 >See Payments
                 </button>
@@ -194,7 +162,7 @@ export default class MyApp extends React.Component {
 
                         ))
                     }
-                </div>
+                </div> */}
             </>
         );
     }

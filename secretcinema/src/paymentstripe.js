@@ -32,6 +32,7 @@ class PaymentsForm extends React.Component {
         const payment = { ...this.state.payment };
         payment[input.name] = input.value;
         this.setState({ payment });
+        console.log(input.name, input.value)
     };
     render() {
         const { payment } = this.state;
@@ -50,6 +51,18 @@ class PaymentsForm extends React.Component {
                             type="text"
                             className="form-control"
                         />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="CardNumber">Card number: </label>
+                        <input
+                            onChange={this.handleChange}
+                            name="CardNumber"
+                            value={payment.CardNumber}
+                            id="CardNumber"
+                            type="number"
+                            className="form-control"
+                        />
+
                     </div>
                     <CardElement
                         options={{
