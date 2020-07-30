@@ -1,6 +1,7 @@
 
 import React from 'react';
 
+
 class LargePhoto extends React.Component {
 
 

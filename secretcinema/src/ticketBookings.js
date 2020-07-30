@@ -1,5 +1,27 @@
 import React from 'react';
 import axios from 'axios';
+
+class ticketBookings extends React.Component {
+    state = {
+
+        booking: { movieTitle: "", date: "", time: "", customerName: "", numberOfSeats: "1", children: "1", adults: "1", concessions: "1" },
+        errors: {}
+
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+
+
+        axios.post('http://localhost:5000/cinema/bookings', this.state.booking)
+            .then((res) => {
+                console.log(res.data)
+            }).catch((error) => {
+                console.log(error.response)
+            });
+
+
+
 import PayBtn from './paypalComponent';
 import PaypalBtn from 'react-paypal-checkout';
 import { Link } from 'react-router-dom';
@@ -20,6 +42,7 @@ class ticketBookings extends React.Component {
             payment: { paymentID: '', paymentToken: '', address: { recipient_name: '' } },
             errMessage: {}
         }
+
     }
 
     handleChange = ({ currentTarget: input }) => {
@@ -30,6 +53,8 @@ class ticketBookings extends React.Component {
 
         let subArray = []      
         subArray.push(parseFloat(booking.children), parseFloat(booking.adults), parseFloat(booking.concessions))
+
+
 
         const subtotal = subArray.reduce(function(a, b, c) {
             return  (a + b + c)
@@ -112,6 +137,7 @@ class ticketBookings extends React.Component {
         this.setState({ booking });
     }
 
+
     render() {
 
         const { booking } = this.state;
@@ -162,6 +188,15 @@ class ticketBookings extends React.Component {
                     <div className="form-group">
                         <label htmlFor="adults">Adults</label>
                         <select onChange={this.handleChange} name="adults" value={booking.adults} id="adults" type="select" className="form-control">
+
+                            <option value="0"> 0 </option>
+                            <option value="1"> 1 </option>
+                            <option value="2"> 2 </option>
+                            <option value="3"> 3 </option>
+                            <option value="4"> 4 </option>
+                            <option value="5"> 5 </option>
+                            <option value="6"> 6 </option>
+
                             <option value={0}> 0 </option>
                             <option value={this.state.adultTicket.price}> 1 </option>
                             <option value={this.state.adultTicket.price * 2}> 2 </option>
@@ -169,25 +204,40 @@ class ticketBookings extends React.Component {
                             <option value={this.state.adultTicket.price * 4}> 4 </option>
                             <option value={this.state.adultTicket.price * 5}> 5 </option>
                             <option value={this.state.adultTicket.price * 6}> 6 </option>  
+
                         </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="concessions">Concession: (students, senior citizens)</label>
                         <select onChange={this.handleChange} name="concessions" value={booking.concessions} id="concessions" type="select" className="form-control" >
 
-                        <option value={0}> 0 </option>
+                            <option value="0"> 0 </option>
+                            <option value="1"> 1 </option>
+                            <option value="2"> 2 </option>
+                            <option value="3"> 3 </option>
+                            <option value="4"> 4 </option>
+                            <option value="5"> 5 </option>
+                            <option value="6"> 6 </option>
+
+                              <option value={0}> 0 </option>
                             <option value={this.state.concessionTicket.price}> 1 </option>
                             <option value={this.state.concessionTicket.price * 2}> 2 </option>
                             <option value={this.state.concessionTicket.price * 3}> 3 </option>
                             <option value={this.state.concessionTicket.price * 4}> 4 </option>
                             <option value={this.state.concessionTicket.price * 5}> 5 </option>
                             <option value={this.state.concessionTicket.price * 6}> 6 </option>  
+
                         </select>
 
                     </div>                    
                     <div>
                         <p>Subtotal: {parseFloat(this.state.subtotal) === isNaN ? '' : <p>£{this.state.subtotal}</p>} </p>
                     </div>
+
+                    <button className="btn btn-success" type="submit">Book</button>
+
+
+
 
                     <div id="paypal-btn">
                     <PaypalBtn

@@ -12,7 +12,8 @@ import AboutUs from './aboutUs';
 import filmDetails from './filmDetails';
 import filmClassification from './filmClassification';
 import payments from './paymentstripe';
-// import ContactUs from './contactUs';
+
+
 import showingDetails from './showingDetails';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
@@ -28,12 +29,16 @@ function App() {
             <Route path="/showing/:id" component={showingDetails} />
             <Route path="/showing" component={currentlyShowing} />
             <Route path="/screens" component={screens} />
+
+            <Route path="/opentimes" component={OpeningTimes} />
+            <Route path="/ticketBookings" component={ticketBookings} />
             <Route path="/filmClassification" component={filmClassification} />
             <Route path="/payments/stripe" component={payments} />
             <Route path="/releases/:id" component={filmDetails} />
-            <Route path="/releases" component={NewReleases} />
+            <Route path="/releases" component={NewReleases} />    
             <Route path="/aboutUs" component={AboutUs} />
             {/* <Route path="/contactUs" component={ContactUs} /> */}
+
             <Route path="/" component={Homepage} />
           </Switch>
           <Footer />
