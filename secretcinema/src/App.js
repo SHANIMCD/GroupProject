@@ -5,7 +5,7 @@ import Navigation from './navbar';
 import Footer from './footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Bloop from 'react-bootstrap/esm/Switch';
+
 import NewReleases from './newReleases';
 import currentlyShowing from './currentlyShowing';
 import screens from './screens';
@@ -17,7 +17,7 @@ import payments from './paymentstripe';
 
 
 import showingDetails from './showingDetails';
-import Dashboard from './dashboard';
+
 
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';

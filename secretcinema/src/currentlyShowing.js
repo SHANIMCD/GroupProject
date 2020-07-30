@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/Card";
+
 import { Link } from 'react-router-dom';
 // import filmDetails from './filmDetails';
 const apiKey = '&apikey=f1887e96';
@@ -32,7 +32,7 @@ class NewReleases extends React.Component {
     render() {
         return (
             <div class="container" >
-            <div className ="page" className = "row" >
+            <div className ="page row"  >
             
             
                 

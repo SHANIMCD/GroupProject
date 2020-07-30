@@ -32,8 +32,6 @@ class ticketBookings extends React.Component {
         e.preventDefault();
 
 
-        const email = this.email.current.value;
-
        
         // const errors = this.validate();
         // console.log(errors);
@@ -84,7 +82,7 @@ class ticketBookings extends React.Component {
         const {booking} = this.state;
 
         return (
-            <div class="container" class="Lphoto">
+            <div class="container Lphoto">
             <div class="row">
                 <div class="col-md-6">
 

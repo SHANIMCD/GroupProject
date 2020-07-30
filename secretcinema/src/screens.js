@@ -34,7 +34,7 @@ class Screens extends React.Component {
     }
     render() {
         return (
-            <div class="container" class="Lphoto">
+            <div class="container Lphoto">
                 <div class="row">
                     <div class="col-md-6">
 

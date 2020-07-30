@@ -26,7 +26,7 @@ class NewReleases extends React.Component {
     render() {
         return (
             <div class="container" >
-            <div className ="page"  className = "row">
+            <div className ="page row" >
                  {
                     this.state.data.map(film => (
                         <div  className="card-b">
