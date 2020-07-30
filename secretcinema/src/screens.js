@@ -1,6 +1,4 @@
 import React from 'react';
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
 import LargePhoto from './largePhoto';
 import Button from 'react-bootstrap/Button';
 class Screens extends React.Component {

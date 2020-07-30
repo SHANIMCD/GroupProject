@@ -2,7 +2,7 @@ import React from 'react';
 
 import axios from 'axios';
 
-//import Button from 'react-bootstrap/Button';
+
 
 class ticketBookings extends React.Component {
     state = {
@@ -12,35 +12,10 @@ class ticketBookings extends React.Component {
 
     }
 
-    // validate = () => {
-    //     const errors = {};
-
-    //     const {booking} = this.state;
-    //     if (booking.movieTitle.trim() === '')
-    //     errors.movieTitle = 'Movie Title is required.';
-    //     if (booking.date.trim()=== '')
-    //     errors.date = 'Screen Date is required.';
-    //     if (booking.time.trim() === '')
-    //     errors.time = 'Screen Time is required.';
-
-
-    //     return Object.keys(errors).length === 0 ? null: errors;
-
-    // };
-
     handleSubmit = e => {
         e.preventDefault();
 
 
-        const email = this.email.current.value;
-
-       
-        // const errors = this.validate();
-        // console.log(errors);
-        // this.setState({errors});
-        // if (errors) return;
-
-        // console.log("Submitted");
         axios.post('http://localhost:5000/cinema/bookings', this.state.booking)
             .then((res) => {
                 console.log(res.data)
@@ -59,29 +34,10 @@ class ticketBookings extends React.Component {
     }
 
 
+
     render() {
 
         const { booking } = this.state;
-
-        
-        const errors = this.validate();
-        console.log(errors);
-        this.setState({errors});
-        if (errors) return;
-
-        console.log("Submitted");
-    }
-
-    handleChange = ({currentTarget: input}) => {
-        const booking = {...this.state.booking};
-        booking[input.name] = input.value;
-        this.setState({booking});
-    }
-
-    
-    render() {
-
-        const {booking} = this.state;
 
         return (
             <div>
@@ -137,29 +93,25 @@ class ticketBookings extends React.Component {
                             <option value="3"> 3 </option>
                             <option value="4"> 4 </option>
                             <option value="5"> 5 </option>
-                            <option value="6"> 6 </option>  
+                            <option value="6"> 6 </option>
                         </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="concessions">Concessions</label>
                         <select onChange={this.handleChange} name="concessions" value={booking.concessions} id="concessions" type="select" className="form-control" >
-                        <option value="0"> 0 </option>
+                            <option value="0"> 0 </option>
                             <option value="1"> 1 </option>
                             <option value="2"> 2 </option>
                             <option value="3"> 3 </option>
                             <option value="4"> 4 </option>
                             <option value="5"> 5 </option>
-                            <option value="6"> 6 </option>  
+                            <option value="6"> 6 </option>
                         </select>
 
                     </div>
-                    {/* <Button  href="./payments" variant="dark">Book Now</Button>{' '} <br /> */}
 
-
-                    {/* <button  href="./payments"className = "btn btn-primary"> Book </button> */}
                     <button className="btn btn-success" type="submit">Book</button>
 
-                    {/* <button  href="./payments"className = "btn btn-primary"> Book </button> */}
 
                 </form>
             </div>

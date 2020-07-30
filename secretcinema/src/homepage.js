@@ -1,9 +1,6 @@
 
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import AboutCinema from './AboutCinema';
-import Navigation from './navbar';
-import screens from './screens';
 import OpeningTimes from './openingTimes';
 import ticketBookings from './ticketBookings';
 import filmClassification from './filmClassification';
@@ -24,9 +21,6 @@ class Homepage extends React.Component {
                 </div>
 
                 <div class = "col-md-6" className="info-col">
-
-
-                
                 <Switch>
             
              {/* <Route path="/screens" component={screens} /> */}
