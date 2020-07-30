@@ -201,7 +201,6 @@ class ticketBookings extends React.Component {
                     <button><Link to='/ticketBookings'>Book another ticket</Link></button>
                     <button><Link to='/'>Home page</Link></button>
                 </div>
-
                 <div>
                     {
                         this.state.payments.map(payment => (
