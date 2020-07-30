@@ -108,7 +108,7 @@ class filmClassification extends React.Component {
                             <div class="col-md-6 no-padding-right">
                             <div class="row">
                             <div class="col-md-4 no-padding">
-                                    <img  alt='18' src="https://cdn.thinglink.me/api/image/512616823280107522/1240/10/scaletowidth" />
+                                    <img  alt='18' src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/BBFC_18_2019.svg/1200px-BBFC_18_2019.svg.png" />
                         
                                     </div>
                                     <div class="col-md-8 no-padding-right">
