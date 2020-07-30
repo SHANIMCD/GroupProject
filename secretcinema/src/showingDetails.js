@@ -44,7 +44,7 @@ class showingDetails extends React.Component {
     render() {
         return (
             <div>
-            <Card className ="page" className="row">
+            <Card className ="page row">
             
             <Card.Img variant="top" alt='' src={this.state.poster} />
             <Card.Body>

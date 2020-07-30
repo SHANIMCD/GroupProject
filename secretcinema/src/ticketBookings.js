@@ -21,11 +21,12 @@ class ticketBookings extends React.Component {
             errMessage: {}
         }
     }
-    
+
     handleChange = ({ currentTarget: input }) => {
         const booking = { ...this.state.booking };
         booking[input.name] = input.value;
         this.setState({ booking });
+
 
         let subArray = []      
         subArray.push(parseFloat(booking.children), parseFloat(booking.adults), parseFloat(booking.concessions))
@@ -103,6 +104,17 @@ class ticketBookings extends React.Component {
             sandbox: 'AXIzbbkFFuxog3aKuvy6mveyEuYnlOhGwCbCtZ0AIdyarrfQywAmqPvbADwKvRAWmR2pwVCVrMlXjd9O',
             production: 'AXIzbbkFFuxog3aKuvy6mveyEuYnlOhGwCbCtZ0AIdyarrfQywAmqPvbADwKvRAWmR2pwVCVrMlXjd9O',
         }
+    }
+
+    handleChange = ({ currentTarget: input }) => {
+        const booking = { ...this.state.booking };
+        booking[input.name] = input.value;
+        this.setState({ booking });
+    }
+
+    render() {
+
+        const { booking } = this.state;
 
         return (
             <div onClick={this.checkInputs()}>
@@ -162,6 +174,7 @@ class ticketBookings extends React.Component {
                     <div className="form-group">
                         <label htmlFor="concessions">Concession: (students, senior citizens)</label>
                         <select onChange={this.handleChange} name="concessions" value={booking.concessions} id="concessions" type="select" className="form-control" >
+
                         <option value={0}> 0 </option>
                             <option value={this.state.concessionTicket.price}> 1 </option>
                             <option value={this.state.concessionTicket.price * 2}> 2 </option>
@@ -190,10 +203,6 @@ class ticketBookings extends React.Component {
                     </div>
                     <span id="check-input"></span>
                     
-                   
-                    
-              
-
                 </form>
                 <div style={{display: 'none'}} id="booking-thanks">
                     <p> Thank you for your booking, {this.state.payment.address.recipient_name}</p>

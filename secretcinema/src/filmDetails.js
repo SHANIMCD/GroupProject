@@ -1,7 +1,6 @@
 import React from 'react';
 import Axios from 'axios';
 import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/Card";
 const apiKey = '&apikey=f1887e96';
 
 class filmDetails extends React.Component {
@@ -46,7 +45,7 @@ class filmDetails extends React.Component {
         return (
             <div>
                 <div class="container" >
-                <Card className ="page" className="row">
+                <Card className ="page row">
               
                 
 
