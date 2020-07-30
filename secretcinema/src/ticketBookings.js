@@ -29,12 +29,9 @@ class ticketBookings extends React.Component {
     // };
 
     handleSubmit = e => {
+        alert('Your booking was successful!');
         e.preventDefault();
-
-
-        const email = this.email.current.value;
-
-       
+        // const email = this.email.current.value;
         // const errors = this.validate();
         // console.log(errors);
         // this.setState({errors});
@@ -47,48 +44,29 @@ class ticketBookings extends React.Component {
             }).catch((error) => {
                 console.log(error.response)
             });
-
-
     }
 
     handleChange = ({ currentTarget: input }) => {
         const booking = { ...this.state.booking };
         booking[input.name] = input.value;
         this.setState({ booking });
-
     }
 
+    handleChange = ({ currentTarget: input }) => {
+        const booking = { ...this.state.booking };
+        booking[input.name] = input.value;
+        this.setState({ booking });
+    }
 
     render() {
 
         const { booking } = this.state;
-
-        
-        const errors = this.validate();
-        console.log(errors);
-        this.setState({errors});
-        if (errors) return;
-
-        console.log("Submitted");
-    }
-
-    handleChange = ({currentTarget: input}) => {
-        const booking = {...this.state.booking};
-        booking[input.name] = input.value;
-        this.setState({booking});
-    }
-
-    
-    render() {
-
-        const {booking} = this.state;
 
         return (
             <div>
                 <h1>Book a Film</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
-
                         <label htmlFor="movieTitle">Movie Title</label>
                         <input onChange={this.handleChange} name="movieTitle" value={booking.movieTitle} id="movieTitle" type="text" className="form-control" />
                     </div>
@@ -105,7 +83,6 @@ class ticketBookings extends React.Component {
                         <input onChange={this.handleChange} name="customerName" value={booking.customerName} id="customerName" type="text" className="form-control" />
                     </div>
                     <div className="form-group">
-
                         <label htmlFor="numberOfSeats">Number of seats</label>
                         <select onChange={this.handleChange} name="numberOfSeats" value={booking.numberOfSeats} id="numberOfSeats" type="select" className="form-control">
                             <option value="1"> 1 </option>
@@ -137,30 +114,25 @@ class ticketBookings extends React.Component {
                             <option value="3"> 3 </option>
                             <option value="4"> 4 </option>
                             <option value="5"> 5 </option>
-                            <option value="6"> 6 </option>  
+                            <option value="6"> 6 </option>
                         </select>
                     </div>
                     <div className="form-group">
                         <label htmlFor="concessions">Concessions</label>
                         <select onChange={this.handleChange} name="concessions" value={booking.concessions} id="concessions" type="select" className="form-control" >
-                        <option value="0"> 0 </option>
+                            <option value="0"> 0 </option>
                             <option value="1"> 1 </option>
                             <option value="2"> 2 </option>
                             <option value="3"> 3 </option>
                             <option value="4"> 4 </option>
                             <option value="5"> 5 </option>
-                            <option value="6"> 6 </option>  
+                            <option value="6"> 6 </option>
                         </select>
-
                     </div>
                     {/* <Button  href="./payments" variant="dark">Book Now</Button>{' '} <br /> */}
-
-
                     {/* <button  href="./payments"className = "btn btn-primary"> Book </button> */}
-                    <button className="btn btn-success" type="submit">Book</button>
-
+                    <button id='submitButton' className="btn btn-success" type="submit">Book</button>
                     {/* <button  href="./payments"className = "btn btn-primary"> Book </button> */}
-
                 </form>
             </div>
         )
