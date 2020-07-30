@@ -45,7 +45,7 @@ class NewReleases extends React.Component {
                             to={`/showing/${film.imdbID}`}>
                                 
                                
-                            <Card.Img variant="top" src={film.Poster} /> 
+                            <Card.Img  class="Imgfullpercent"variant="top" src={film.Poster} /> 
                             <Card.Body>
                             <h6>{film.Title}</h6>
                             </Card.Body>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 import Card from "react-bootstrap/Card";
+
 const apiKey = '&apikey=f1887e96';
 
 class filmDetails extends React.Component {
@@ -49,7 +50,7 @@ class filmDetails extends React.Component {
               
                 
 
-                <Card.Img variant="top" alt='' src={this.state.poster} />
+                <Card.Img class="Imgfullpercent" variant="top" alt='' src={this.state.poster} />
                 
                 
 

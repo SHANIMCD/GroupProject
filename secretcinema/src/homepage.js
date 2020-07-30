@@ -1,6 +1,8 @@
 
 import React from 'react';
+
 import AboutCinema from './AboutCinema';
+
 import OpeningTimes from './openingTimes';
 import ticketBookings from './ticketBookings';
 import filmClassification from './filmClassification';
