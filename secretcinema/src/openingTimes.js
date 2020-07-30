@@ -1,44 +1,59 @@
 import React from 'react';
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
 
+import LargePhoto from './largePhoto';
 class OpeningTimes extends React.Component {
 
     render() {
         return (
-            <div>
-                <Row>
-                    <Col sm>
-                    <img alt='' src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=625&q=80" />
-                    </Col>
-                    <Col sm>
+
+            <div class="container Lphoto" >
+            <div class="row">
+                <div class="col-md-6">
+
+                     <LargePhoto /> 
+                    
+                </div>
+            
+               <div class = "row">
+                    
+                <div class = "col-md-8" >
                     <h1>Opening Times:</h1>
                 <p>
-                    <h5>Monday
+                <table>
+<tr><th>Sunday</th><td>Closed</td></tr>
+<tr><th>Monday</th><td>9am - 5pm</td></tr>
+<tr><th>Tuesday</th><td>9am - 5pm</td></tr>
+<tr><th>Wednesday</th><td>9am - 5pm</td></tr>
+<tr><th>Thursday</th><td>9am - 5pm</td></tr>
+</table>
+                    {/* Monday
                     <br />11am-10pm
-                    </h5>
-                    <br /><h5>Tuesday
+                  
+                    <br />Tuesday
                     <br />11am-10pm
-                    </h5>
-                    <br /><h5>Wednesday
+                    
+                    <br />Wednesday
                     <br />11am-10pm
-                    </h5>
-                    <br /><h5>Thursday
+                    
+                    <br />Thursday
                     <br />11am-11pm
-                    </h5>
-                    <br /><h5>Friday
+                    
+                    <br />Friday
                     <br />11am-midnight
-                    </h5>
-                    <br /><h5>Saturday
+                    
+                    <br />Saturday
                     <br />11am-midnight
-                    </h5>
-                    <br /><h5>Sunday
-                    <br />11am-10pm
-                    </h5>
+                    
+                    <br />Sunday
+                    <br />11am-10pm */}
+                    
                 </p>
-                    </Col>
-                </Row>
-            </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+           
+
         )
     }
 }

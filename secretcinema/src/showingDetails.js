@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from "react-bootstrap/Card";
 import Axios from 'axios';
 const apiKey = '&apikey=f1887e96';
 
@@ -43,12 +44,21 @@ class showingDetails extends React.Component {
     render() {
         return (
             <div>
-                <h1>{this.state.title}</h1>
-                <img alt='' src={this.state.poster} />
-                <p>Starring: {this.state.actors}</p>
-                <p>Showing times: </p>
-                <p> {this.state.director === 'N/A' ? '' : <p>Director: {this.state.director}</p>} </p>
-            </div>
+
+            <Card className ="page row">
+
+            
+            <Card.Img variant="top" alt='' src={this.state.poster} />
+            <Card.Body>
+            <Card.Title><h1>{this.state.title}</h1></Card.Title>
+            <Card.Text>
+            <p>Starring: {this.state.actors}</p>
+            <p>Showing times: </p>
+            <p> {this.state.director === 'N/A' ? '' : <p>Director: {this.state.director}</p>} </p>
+            </Card.Text>
+            </Card.Body>
+            </Card>
+       </div>
         
 
 

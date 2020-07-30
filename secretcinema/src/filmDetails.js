@@ -1,5 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
+import Card from "react-bootstrap/Card";
+
 const apiKey = '&apikey=f1887e96';
 
 class filmDetails extends React.Component {
@@ -43,12 +45,28 @@ class filmDetails extends React.Component {
     render() {
         return (
             <div>
-                <h1>{this.state.title}</h1>
-                <img alt='' src={this.state.poster} />
+                <div class="container" >
+                <Card className ="page row">
+              
+                
+
+                <Card.Img class="Imgfullpercent" variant="top" alt='' src={this.state.poster} />
+                
+                
+
+                
+                <Card.Body>
+                <Card.Title><h1>{this.state.title}</h1></Card.Title>
+    
                 <p>Starring: {this.state.actors}</p>
                 <p>Showing times: </p>
                 <p> {this.state.director === 'N/A' ? '' : <p>Director: {this.state.director}</p>} </p>
-            </div>
+                
+                </Card.Body>
+                </Card>
+                </div>
+           
+           </div>
         
 
 
