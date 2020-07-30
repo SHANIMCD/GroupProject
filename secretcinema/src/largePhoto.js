@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Card from "react-bootstrap/Card";
 
 class LargePhoto extends React.Component {
 
