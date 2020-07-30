@@ -38,19 +38,19 @@ class ticketBookings extends React.Component {
     }
     
     checkInputs() {
-    
       let formInput = this.state.booking
+
       if (this.state.subtotal != 0 && formInput.movieTitle != "" && formInput.customerName != "" && formInput.date != "" && formInput.time != "" && parseInt(formInput.numberOfSeats) === ((formInput.children/3.5) + (formInput.adults/12.5) + (formInput.concessions/6.5))){
         document.getElementById('paypal-btn').style.display = 'block'
         document.getElementById('check-input').innerText = 'Ready to checkout. Click pay to be sent to an external merchant'
        }
-       else {
+       do {
         window.addEventListener('DOMContentLoaded', () => {
             const ppBtn = document.getElementById('paypal-btn')
             ppBtn.style.display = 'none'
             document.getElementById('check-input').innerText = 'please fill all required fields to checkout.'
         })
-       } 
+       } while (this.state.subtotal === 0 && formInput.movieTitle === "" && formInput.customerName === "" && formInput.date === "" && formInput.time != "" && parseInt(formInput.numberOfSeats) === ((formInput.children/3.5) + (formInput.adults/12.5) + (formInput.concessions/6.5)))
     }
 
  
@@ -105,9 +105,9 @@ class ticketBookings extends React.Component {
         }
 
         return (
-            <div>
+            <div onClick={this.checkInputs()}>
                 <h1 id="movieBookTitle">Book a Film</h1>
-                <form onChange={this.checkInputs()}  id="booking-form" onSubmit={this.handleSubmit}>
+                <form   id="booking-form" onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="movieTitle">Movie Title: (required)</label>
                         <input onChange={this.handleChange} name="movieTitle" value={booking.movieTitle} id="movieTitle" type="text" className="form-control" />
