@@ -46,7 +46,7 @@ class filmDetails extends React.Component {
         return (
             <div>
                 <div class="container" >
-                <Card className ="page row" >
+                <Card className ="page row">
               
                 
 

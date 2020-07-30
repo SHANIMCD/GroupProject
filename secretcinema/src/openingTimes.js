@@ -5,6 +5,7 @@ class OpeningTimes extends React.Component {
 
     render() {
         return (
+
             <div class="container Lphoto" >
             <div class="row">
                 <div class="col-md-6">
@@ -52,6 +53,7 @@ class OpeningTimes extends React.Component {
                     </div>
                     </div>
            
+
         )
     }
 }

@@ -23,9 +23,6 @@ class Homepage extends React.Component {
                 </div>
 
                 <div class = "col-md-6" className="info-col">
-
-
-                
                 <Switch>
             
              {/* <Route path="/screens" component={screens} /> */}
