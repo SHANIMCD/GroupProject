@@ -17,7 +17,7 @@ class AboutCinema extends React.Component {
                 <br /> of Piccadilly Circus.
                 </p>
             <div>
-                <Button variant="dark">Book Now</Button>{' '} <br />
+                <Button href="./ticketBookings" variant="dark">Book Now</Button>{' '} <br />
                 <br /> <Button href="./filmClassification" variant="dark">Film Classifications</Button>{' '}
             </div>
         </div>

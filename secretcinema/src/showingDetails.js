@@ -53,7 +53,7 @@ class showingDetails extends React.Component {
             <Card.Title><h1>{this.state.title}</h1></Card.Title>
             <Card.Text>
             <p>Starring: {this.state.actors}</p>
-            <p>Showing times: </p>
+            <p>Showing times: 10:00 & 15:00 </p>
             <p> {this.state.director === 'N/A' ? '' : <p>Director: {this.state.director}</p>} </p>
             </Card.Text>
             </Card.Body>

@@ -213,7 +213,6 @@ class ticketBookings extends React.Component {
                             <div style={{ display: 'none' }} id="booking-thanks">
                                 <p> Thank you for your booking, {this.state.payment.address.recipient_name}</p>
                                 <p>Confirmation code: {this.state.payment.paymentToken}</p>
-                                <button><Link to='/ticketBookings'>Book another ticket</Link></button>
                                 <button><Link to='/'>Home page</Link></button>
                             </div>
 
