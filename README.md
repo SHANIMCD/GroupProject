@@ -13,6 +13,7 @@ As a group project, our team was asked to build a new website for them, which re
 The project needs the following to run:
 * Visual Studio Code (https://code.visualstudio.com/download)
 * Node.js (https://nodejs.org/en/download/)
+* MongoDB Shell (https://downloads.mongodb.com/compass/mongosh-0.0.8-win32.zip)
 * Google Chrome (https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en)
 
 For testing:
@@ -49,6 +50,11 @@ To run the frontend:
 ```
 - $ cd ../selenium_test.js
 - $ node selenium_test.js
+```
+### Node.js
+```
+- $ git clone https://github.com/rachchan/cinemaexpress.git
+- $ mocha --recursive --exit
 ```
 
 ## Authors
