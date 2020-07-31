@@ -1,11 +1,12 @@
-# Cinema website for a well-known cinema chaim, QA Cinemas
+# Cinema website for a well-known cinema chain, QA Cinemas
 
-As a group project, our team was asked to build a new website for them, which should represent information about movies, listings, upcoming releases, etc.
+As a group project, our team was asked to build a new website for them, which represents information about current and up coming movies, listings times, information about the cinema including opening times and images of seating plans and screen rooms. Users can book a film using PayPal Checkout Integration.
 
 ## Getting Started
 
 - Copy of the project can be found at https://github.com/SHANIMCD/GroupProject
 - The repository for the Node/Express Server can be found at: https://github.com/rachchan/cinemaexpress
+- The repository for the Selenium tests can be found at: https://github.com/misstaevere/CinemaSelenium
 
 ### Prerequisites
 
@@ -41,21 +42,13 @@ To run the frontend:
 
 ### Java
 ```
-- $ git clone (repoTBC)
+- $ git clone git@github.com:misstaevere/CinemaSelenium.git
 - $ mvn test
 ```
 ### JavaScript
 ```
-- $ git clone (repo tbc)
-- $ cd ../
+- $ cd ../selenium_test.js
 - $ node selenium_test.js
-```
-
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
 ```
 
 ## Authors
@@ -74,3 +67,8 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * **Jordan Harrison** - [JHarry444](https://github.com/JHarry444)
+
+* **The Open Movie Database** - (omdbapi.com)
+
+* **Paypal** - (developer.paypal.com)
+

@@ -25,6 +25,8 @@ class OpeningTimes extends React.Component {
 <tr><th>Tuesday</th><td>9am - 5pm</td></tr>
 <tr><th>Wednesday</th><td>9am - 5pm</td></tr>
 <tr><th>Thursday</th><td>9am - 5pm</td></tr>
+<tr><th>Friday</th><td>9am - 5pm</td></tr>
+<tr><th>Saturday</th><td>9am - 5pm</td></tr>
 </table>
                     {/* Monday
                     <br />11am-10pm

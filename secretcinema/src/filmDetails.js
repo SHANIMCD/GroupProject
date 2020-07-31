@@ -59,7 +59,6 @@ class filmDetails extends React.Component {
                 <Card.Title><h1>{this.state.title}</h1></Card.Title>
     
                 <p>Starring: {this.state.actors}</p>
-                <p>Showing times: </p>
                 <p> {this.state.director === 'N/A' ? '' : <p>Director: {this.state.director}</p>} </p>
                 
                 </Card.Body>
